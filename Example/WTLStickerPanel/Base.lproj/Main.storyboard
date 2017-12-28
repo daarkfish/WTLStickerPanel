@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0bN-Km-TgY">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wQg-tq-qST">
+            <objects>
+                <viewController id="whP-gf-Uak" customClass="WTLViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uEw-UM-LJ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mvr-aV-6Um"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OX9-2V-c6J">
+                                <rect key="frame" x="15" y="119" width="195" height="30"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OIa-d8-wsM"/>
+                                    <constraint firstAttribute="width" constant="195" id="WSf-OF-RJk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrM-I8-LGm">
+                                <rect key="frame" x="218" y="120" width="62" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="WFT-dF-Vth"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Sticker"/>
+                                <connections>
+                                    <action selector="stickerButtonPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="8d9-Np-og9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OX9-2V-c6J" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="15" id="6XC-eW-MYV"/>
+                            <constraint firstItem="SrM-I8-LGm" firstAttribute="leading" secondItem="OX9-2V-c6J" secondAttribute="trailing" constant="8" id="76m-jy-DBN"/>
+                            <constraint firstAttribute="trailing" secondItem="SrM-I8-LGm" secondAttribute="trailing" constant="40" id="Dtd-oH-EQb"/>
+                            <constraint firstItem="OX9-2V-c6J" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="55" id="nJh-OB-W3L"/>
+                            <constraint firstItem="SrM-I8-LGm" firstAttribute="centerY" secondItem="OX9-2V-c6J" secondAttribute="centerY" id="rP1-Xa-8jL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cPA-ZW-2a7"/>
+                    <connections>
+                        <outlet property="inputTextView" destination="OX9-2V-c6J" id="t3I-XB-Zq1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301.25" y="432.04225352112678"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n82-8Z-t2G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0bN-Km-TgY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="00z-1w-ztP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="whP-gf-Uak" kind="relationship" relationship="rootViewController" id="sPi-9Q-Eml"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Sx-IN-bov" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303.75" y="432.04225352112678"/>
+        </scene>
+    </scenes>
+</document>

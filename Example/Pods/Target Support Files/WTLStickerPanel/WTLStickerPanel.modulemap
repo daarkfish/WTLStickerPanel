@@ -1,0 +1,6 @@
+framework module WTLStickerPanel {
+  umbrella header "WTLStickerPanel-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -11,6 +11,8 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "WTLGridHorizontalCollectionViewLayout.h"
 #import "WTLSticker.h"
+
+#define STICKER_PANEL_HEIGHT 215
 @interface WTLStickerPanel()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, WTLStickerCollectionViewCellDelegate>
 @property (nonatomic, strong) NSMutableArray *stickerList;
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -40,7 +42,7 @@
         if ([item isKindOfClass:[self class]])
         {
             result = item;
-            result.frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width, 280);
+            result.frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width, STICKER_PANEL_HEIGHT);
             break;
         }
     }
@@ -145,7 +147,7 @@
     [window bringSubviewToFront:[WTLStickerPanel sharedPanel]];
     
     [UIView animateWithDuration:0.5 animations:^{
-        [WTLStickerPanel sharedPanel] .frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height - 280, [[UIScreen mainScreen] bounds].size.width, 280);
+        [WTLStickerPanel sharedPanel] .frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height - STICKER_PANEL_HEIGHT, [[UIScreen mainScreen] bounds].size.width, STICKER_PANEL_HEIGHT);
     }];
 }
 
@@ -160,7 +162,7 @@
         WTLStickerPanel *panelView = result[0];
   
         [UIView animateWithDuration:0.5 animations:^{
-            panelView.frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width, 280);
+            panelView.frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height, [[UIScreen mainScreen] bounds].size.width, STICKER_PANEL_HEIGHT);
         } completion:^(BOOL finished) {
             [panelView removeFromSuperview];
         }];

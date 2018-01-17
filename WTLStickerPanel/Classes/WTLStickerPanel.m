@@ -86,7 +86,7 @@
         }
     }
    
-    self.pageControl.numberOfPages = [self.stickerList count] % 6 == 0 ? pageCount : pageCount + 1;
+    self.pageControl.numberOfPages = [stickerArray count] % 6 == 0 ? pageCount : pageCount + 1;
     [self.collectionView reloadData];
 }
 

@@ -29,7 +29,7 @@
     
     self.inputTextView.delegate = self;
     NSMutableArray *temp = [NSMutableArray new];
-    for (int i = 1; i < 8; i++) {
+    for (int i = 1; i <7; i++) {
         WTLSticker *sticker = [WTLSticker new];
         sticker.StickerId = i;
         sticker.Stickercode = [NSString stringWithFormat:@"{{sticker:%d}}", i]; //{{sticker:1}}
